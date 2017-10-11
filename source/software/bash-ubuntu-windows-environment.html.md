@@ -1,5 +1,5 @@
 ---
-title: Bash Ubuntu Windows 環境
+title: Bash Ubuntu Windows 環境設定メモ
 date: 2017-10-10
 ---
 
@@ -78,11 +78,9 @@ http://mix-mplus-ipa.osdn.jp/migu/ からダウンロードし解凍して中に
 ~/.fonts にコピーし以下を実行：
 
 ```sh
-cd /tmp
-cp /mnt/c/Users/foo/Downloads/migu-1p-20150712.zip .
-unzip migu-1p-20150712.zip
-cd migu-1p-20150712
-cp *.ttf ~/.fonts
+cd /mnt/c/Users/foo/Downloads
+unzip migu-1p-20150712.zip 
+cp migu-1p-20150712/*.ttf ~/.fonts
 fc-cache -fv
 ```
 
