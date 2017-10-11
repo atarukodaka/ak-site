@@ -37,5 +37,7 @@ set :markdown, :fenced_code_blocks => true, :autolink => true,
 
 activate :deploy do |deploy|
   deploy.deploy_method = :git
+  deploy.remote = 'git@github.com:atarukodaka/atarukodaka.github.io.git'
   deploy.branch = "master"
+  deploy.build_before = true
 end
