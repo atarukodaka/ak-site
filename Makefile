@@ -2,5 +2,5 @@
 
 upload:
 	bundle exec middleman deploy
-	git commit -m update
+	git commit -a -m update
 	git push origin master

@@ -32,7 +32,6 @@ ssh-keygen -t rsa
 ```
 cd ~/
 git clone git@github.com:atarukodaka/dotfiles.git
-cd dotfiles
 sh dotfiles/install.sh
 
 ```
@@ -41,7 +40,7 @@ sh dotfiles/install.sh
 ### terminal
 
 元の bash terminal を使えばいいのでなくても構わないが、
-軽い rxvt terminal を入れておく。
+軽い urxvt を入れておく。
 
 ```sh
 sudo apt-get install rxvt-unicode
@@ -79,7 +78,11 @@ http://mix-mplus-ipa.osdn.jp/migu/ からダウンロードし解凍して中に
 ~/.fonts にコピーし以下を実行：
 
 ```sh
-wget https://ja.osdn.net/frs/redir.php?m=jaist&f=%2Fmix-mplus-ipa%2F63545%2Fmigu-1p-20150712.zip
+cd /tmp
+cp /mnt/c/Users/foo/Downloads/migu-1p-20150712.zip .
+unzip migu-1p-20150712.zip
+cd migu-1p-20150712
+cp *.ttf ~/.fonts
 fc-cache -fv
 ```
 
