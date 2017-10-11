@@ -4,7 +4,7 @@ date: 2017-10-10
 ---
 
 ## BUW
-Windows10 で Bash が使える。わざわざ vagrant で仮想環境を立てないで済む。
+Windows10 で Bash が使える。わざわざ cygwin 入れたりvagrant で仮想環境を立てないで済む。
 ただし windows 側から linux のファイルは見られないので注意。
 
 ### 参考サイト
@@ -24,6 +24,7 @@ sudo apt-get upgrade
 ### ssh
 ```
 ssh-keygen -t rsa
+password: xxxx
 ```
 
 ~/.ssh/id_rsa.pub を github にアップ。
@@ -33,7 +34,6 @@ ssh-keygen -t rsa
 cd ~/
 git clone git@github.com:atarukodaka/dotfiles.git
 sh dotfiles/install.sh
-
 ```
 
 ## 各種インストール
@@ -104,11 +104,6 @@ ruby --version
 
 ## tips
 
-### 最新パッケージ
-```
-sudo add-apt-repository ppa:git-core/ppa
-```
-
 ### locale を英語に戻す
 
 ```
@@ -116,7 +111,8 @@ sudo update-locale LANG=en_US.UTF8
 ```
 
 ### 再インストール
-cmd
+window cmd から：
+
 ```sh
 lxrun /uninstall /full /y
 lxrun /install
