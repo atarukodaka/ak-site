@@ -6,6 +6,19 @@ GIT
       middleman (>= 4.0)
       oga (>= 2.0)
 
+GIT
+  remote: git@github.com:atarukodaka/middleman-youtube.git
+  revision: 13584ac79ce90957514d3eca9a4272ba10e33ef0
+  specs:
+    middleman-youtube (0.1.0)
+      middleman (~> 4.0)
+
+PATH
+  remote: extensions/middleman-amazon-link
+  specs:
+    middleman-amazon-link (0.0.4)
+      amazon-ecs (~> 2.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -74,8 +87,6 @@ GEM
       middleman-cli (= 4.2.1)
       middleman-core (= 4.2.1)
       sass (>= 3.4.0, < 4.0)
-    middleman-amazon-link (0.0.4)
-      amazon-ecs (~> 2.3)
     middleman-cli (4.2.1)
       thor (>= 0.17.0, < 2.0)
     middleman-compass (4.0.1)
@@ -169,11 +180,12 @@ DEPENDENCIES
   builder
   middleman (>= 4.0.0)
   middleman-akcms!
-  middleman-amazon-link
+  middleman-amazon-link!
   middleman-compass (>= 4.0.0)
   middleman-deploy (~> 2.0.0.pre.alpha)
   middleman-livereload
   middleman-syntax (>= 3.0)
+  middleman-youtube!
   oga
   redcarpet
   therubyracer

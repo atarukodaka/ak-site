@@ -16,6 +16,9 @@ gem 'middleman-livereload'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 
 gem 'middleman-akcms', git: 'git@github.com:atarukodaka/middleman-akcms.git'
+gem 'middleman-amazon-link', git: 'git@github.com:atarukodaka/middleman-amazon-link.git'
+#gem 'middleman-amazon-link', path: 'extensions/middleman-amazon-link'
+gem 'middleman-youtube', git: 'git@github.com:atarukodaka/middleman-youtube.git'
 
 # other gems
 gem 'oga'    ## for summarizing
@@ -25,4 +28,4 @@ gem 'builder'
 gem 'redcarpet'
 
 gem 'therubyracer'
-gem 'middleman-amazon-link'
+

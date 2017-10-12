@@ -41,3 +41,16 @@ activate :deploy do |deploy|
   deploy.branch = "master"
   deploy.build_before = true
 end
+
+## amazon link
+# config.rb
+activate :amazon_link do |amazon|
+  amazon.associate_tag = "myhoney0079-22"
+  amazon.aws_access_key_id = ENV['AWS_ACCESS_KEY']
+  amazon.aws_secret_key = ENV['AWS_SECRET_KEY']
+
+  # optional below
+  amazon.country = "jp"
+  amazon.use_cache = true
+  amazon.cache_dir = ".cache/amazon"
+end
