@@ -3,9 +3,9 @@
     Sibling Articles under '<%= link_to(h(current_resource.directory.name), current_resource.parent) %>'
   </div>
   <ul>
-    <% current_resource.siblings.first(10).each do |res| %>
+    <% current_resource.siblings.select {|r| r.is_article?}.sort_by {|r| r.date}.first(10).reverse.each do |res| %>
     <% next if ! res.is_article? %>
-    <li><%= link_to(h(res.title), res) %></li>
+    <li><%= res.date.strftime("%Y-%m-%d") %>: <%= link_to(h(res.title), res) %></li>
     <% end %>
     <% if current_resource.siblings.size > 10 %>
     <li><%= link_to("...", current_resource.parent) %></li>

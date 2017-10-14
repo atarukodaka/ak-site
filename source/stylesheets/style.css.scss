@@ -131,11 +131,16 @@ a:visited, a:hover {
     h3, h4 { font-size: large; }
     h5, h6 { font-size: medium; }
 
+    /*
     img {
 	box-shadow: 1px 1px 4px rgba(0,0,0,.5);
 	max-width: 90%;
 	margin: 20px auto 20px auto;
 	display: block;
+    }
+   */
+    img {
+	vertical-align: middle;
     }
     dl {
 	dt, dd { margin: 10px 0 10px 0;}

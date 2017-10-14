@@ -54,6 +54,9 @@ sudo -E apt install gconf2   # avoid warnings
 sudo dbus-uuidgen --ensure
 ```
 
+#### 日本語入力: anthy
+anthy が設定が手軽だが、性能があまりよろしくないのでできれば　mozcを使う。
+
 ```elisp
 vi ~/.emacs.d/init.el
 ;;; japanese language (mozc)
@@ -71,6 +74,33 @@ vi ~/.bashrc
 export DISPLAY=localhost:0.0
 alias emacs="NO_AT_BRIDGE=1 LIBGL_ALWAYS_INDIRECT=1 emacs"  # avoid warnings
 
+```
+
+#### 日本語入力：mozc: google日本語入力
+- [emacs\-mozc を動かすための設定（BUW 設定編） \- NTEmacs @ ウィキ \- アットウィキ](https://www49.atwiki.jp/ntemacs/pages/61.html)
+
+https://github.com/smzht/mozc_emacs_helper からダウンロードし、
+mozc\_emacs_helper.exe を /mnt/c/mozc/bin にコピー
+
+```
+vi  ~/bin/mozc_emacs_helper.exe
+#!/bin/sh
+
+cd /mnt/c/mozc/bin
+./mozc_emacs_helper.exe "$@"
+```
+
+mozc mozc-im mozc-popup を melpa から package install
+
+下記を加えないと direct-mode になってしまうので加える。
+
+```
+vi ~/.emacs.d/init.el
+(advice-add 'mozc-session-execute-command
+            :after (lambda (&rest args)
+                     (when (eq (nth 0 args) 'CreateSession)
+                       ;; (mozc-session-sendkey '(hiragana)))))
+                       (mozc-session-sendkey '(Hankaku/Zenkaku)))))
 ```
 
 #### fonts

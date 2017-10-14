@@ -54,3 +54,11 @@ activate :amazon_link do |amazon|
   amazon.use_cache = true
   amazon.cache_dir = ".cache/amazon"
 end
+
+## youtube
+activate :youtube
+
+## google analytics
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-56531446-1'
+end

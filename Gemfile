@@ -14,11 +14,14 @@ gem 'middleman-compass', '>= 4.0.0'
 gem 'middleman-syntax', '>= 3.0'
 gem 'middleman-livereload'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
+gem 'middleman-google-analytics', '~> 2.0'
 
 gem 'middleman-akcms', git: 'git@github.com:atarukodaka/middleman-akcms.git'
 gem 'middleman-amazon-link', git: 'git@github.com:atarukodaka/middleman-amazon-link.git'
 #gem 'middleman-amazon-link', path: 'extensions/middleman-amazon-link'
-gem 'middleman-youtube', git: 'git@github.com:atarukodaka/middleman-youtube.git'
+#gem 'middleman-youtube', git: 'git@github.com:atarukodaka/middleman-youtube.git'
+gem 'middleman-youtube', path: 'extensions/middleman-youtube'
+
 
 # other gems
 gem 'oga'    ## for summarizing
@@ -29,3 +32,4 @@ gem 'redcarpet'
 
 gem 'therubyracer'
 
+gem 'pry-byebug'
