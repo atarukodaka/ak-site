@@ -9,7 +9,7 @@ date: 2017-5-13
 ```
 % export RACK_ENV=production
 % be rails assets:precompile
-% be rails secret
+% be rake secret
 xxxx
 % export SECRET_KEY_BASE=xxxx
 % be rails -b 0.0.0.0 -p 3000
@@ -49,7 +49,7 @@ LoadModule passenger_module /home/guest/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.
   PassengerEnabled on
   DocumentRoot /var/www/html
   RailsBaseURI /railsApp
-  SetEnv SECRET_KEY_BASE _your_scret_key_base_
+  SetEnv SECRET_KEY_BASE _your_secret_key_base_
 
   <Directory /var/www/html>
     AllowOverride all
