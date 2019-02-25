@@ -37,7 +37,6 @@ make
 ```
 sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-rbenv
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 rbenv install 2.4.5
 rbenv rehash
@@ -58,8 +57,23 @@ git config --global core.filemode false
 ```
 
 ## atom
+### 真ん中の罫線を消す
+File - Config - Package: Wrap Guide - disabled
+
 ### emacs風キーバインド
 File - Config - Install:
 
 - https://atom.io/packages/atomic-emacs
 - https://atom.io/packages/emacs-plus
+
+## DB
+
+### postgresql
+```
+sudo apt install postgresql libpg-dev
+```
+
+### sqlite
+```
+sudo apt install sqlite libsqlite3-dev
+```
